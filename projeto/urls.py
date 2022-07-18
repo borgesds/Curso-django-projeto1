@@ -18,7 +18,7 @@ from django.http import HttpResponse
 from django.urls import path
 
 def my_view(request):
-    return HttpResponse('Hello, world!')
+    return HttpResponse('CONSEGUIR GRAÇAS A DEUS!!')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
