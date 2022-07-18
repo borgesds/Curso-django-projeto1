@@ -17,10 +17,19 @@ from django.contrib import admin
 from django.http import HttpResponse
 from django.urls import path
 
-def my_view(request):
-    return HttpResponse('CONSEGUIR GRAÇAS A DEUS!!')
+
+def home(request):
+    return HttpResponse('HOME')
+
+def sobre(request):
+    return HttpResponse('SOBRE')
+
+def contato(request):
+    return HttpResponse('CONTATO')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('outracoisaqualquer/', my_view)
+    path('', home), #Home
+    path('sobre/', sobre), #Sobre
+    path('contato/', contato), #Contato
 ]
