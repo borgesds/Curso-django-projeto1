@@ -14,11 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-#Add include para chamar as urls la de recipes.urls
+# Add include para chamar as urls la de recipes.urls
 from django.urls import path, include
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('recipes.urls')) #puxa o arquivo urls.py ques esta dentro da pasta recipes
+    path('', include('recipes.urls'))
+    # puxa o arquivo urls.py ques esta dentro da pasta recipes
 ]
