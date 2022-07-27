@@ -23,7 +23,6 @@
     <title>Recipes</title>
 
     <style>
-
         :root {
             --color-primary: #269fe6;
             --color-primary-hover: #2086c2;
@@ -86,7 +85,12 @@
             color: var(--color-dark-text);
         }
 
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: var(--font-headings);
         }
 
@@ -127,7 +131,7 @@
 
         .search-input,
         .search-button {
-            border:none;
+            border: none;
             background: none;
             outline: none;
             padding: .5rem;
@@ -152,7 +156,7 @@
 
         .search-form:focus-within {
             border-color: var(--color-alert-dark);
-            background:var(--color-alert-light);
+            background: var(--color-alert-light);
         }
 
         .search-form:focus-within .search-button {
@@ -170,6 +174,8 @@
             background: var(--color-white);
             box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3);
             transition: all 300ms ease-in-out;
+            border-radius: .5rem;
+            overflow: hidden;
         }
 
         .recipe img {
@@ -228,6 +234,45 @@
             flex-grow: 1;
             text-align: center;
         }
+
+        .recipe-meta-title {
+            font-size: 1.6rem;
+        }
+
+        .recipe-footer a {
+            background: var(--color-primary-dark);
+            display: block;
+            color: var(--color-white);
+            text-decoration: none;
+            text-align: center;
+            padding: var(--spacing-gutter-small);
+            transition: all 300ms ease-in-out;
+        }
+
+        .recipe-footer a:hover {
+            filter: brightness(2);
+        }
+
+        .main-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--color-primary-dark);
+            color: var(--color-white);
+            padding: var(--spacing-gutter-medium);
+        }
+
+        .main-footer a {
+            color: var(--color-white);
+            text-decoration: none;
+            transition: all 300ms ease-in-out;
+        }
+
+        .main-footer a:hover {
+            filter: brightness(.5);
+        }
+
     </style>
 </head>
+
 </html>
