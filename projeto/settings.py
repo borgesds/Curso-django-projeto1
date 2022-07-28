@@ -36,8 +36,9 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    # Aqui onde ler a pasta static
     'django.contrib.staticfiles',
-    # A gente tem apps tambm
+    # A gente tem apps também
     'recipes',
 ]
 
