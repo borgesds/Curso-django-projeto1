@@ -120,6 +120,18 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+"""
+=>Se um dia  precisar colocar mais de um css estático, esse é o jeito certo:
+
+STATICFILES_DIRS = [
+    BASE_DIR / 'nome da pasta no diretório (Ex:'base_static') 
+]
+
+=>Para salvar todos os arquivos em uma pasta static única:
+
+STATIC_ROOT = BASE_DIR / 'static'
+"""
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
