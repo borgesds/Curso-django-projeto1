@@ -124,7 +124,7 @@ STATIC_URL = 'static/'
 =>Se um dia  precisar colocar mais de um css estático, esse é o jeito certo:
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'nome da pasta no diretório (Ex:'base_static') 
+    BASE_DIR / 'nome da pasta no diretório (Ex:'base_static')
 ]
 
 =>Para salvar todos os arquivos em uma pasta static única:
