@@ -14,5 +14,6 @@ def recipe(request, id):
     return render(request, 'recipes/pages/recipe-view.html', context={
         'recipe': make_recipe(),
         # cria uma unica receita
+        'is_detail_page': True,
     })
     # automaticamente busca pasta templates/...

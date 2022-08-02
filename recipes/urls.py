@@ -23,9 +23,11 @@ from . import views
 O . significa da pasta onde você esta, import tudo que esta em views.py
 """
 
+app_name = 'recipes'
+
 urlpatterns = [
     # Home
-    path('', views.home),
+    path('', views.home, name="home"),
     # recipe
-    path('recipes/<int:id>/', views.recipe)
+    path('recipes/<int:id>/', views.recipe, name="recipe")
 ]
