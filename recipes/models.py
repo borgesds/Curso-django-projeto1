@@ -10,6 +10,10 @@ from django.db import models
 class Category(models.Model):
     name = models.CharField(max_length=65)
 
+    # Faz com que o nome das categorias apareça em Admin
+    def __str__(self):
+        return self.name
+
 
 class Recipe(models.Model):
     titles = models.CharField(max_length=65)
