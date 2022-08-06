@@ -35,3 +35,7 @@ class Recipe(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.SET_NULL, null=True
     )
+
+    # Faz com que o nome das receitas apareça em Admin
+    def __str__(self):
+        return self.titles

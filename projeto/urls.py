@@ -13,13 +13,21 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
 # Add include para chamar as urls la de recipes.urls
 from django.urls import path, include
+# Add static files e settings.py
+from django.conf.urls.static import static
+from django.conf import settings
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('recipes.urls'))
-    # puxa o arquivo urls.py ques esta dentro da pasta recipes
+    # puxa o arquivo urls.py que esta dentro da pasta recipes
+    path('', include('recipes.urls')),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
