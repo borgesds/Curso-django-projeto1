@@ -28,6 +28,10 @@ app_name = 'recipes'
 urlpatterns = [
     # Home
     path('', views.home, name="home"),
+    # Pegar a categoria das receitas
+    path(
+        'recipes/category/<int:category_id>/', views.category, name="category"
+        ),
     # recipe
-    path('recipes/<int:id>/', views.recipe, name="recipe")
+    path('recipes/<int:id>/', views.recipe, name="recipe"),
 ]
