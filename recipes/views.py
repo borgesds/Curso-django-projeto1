@@ -5,7 +5,10 @@ from recipes.models import Recipe
 
 def home(request):
     # Vamos buscar todas as receitas em Admin pela ultima
-    recipes = Recipe.objects.all().order_by('-id')
+    # is_published=True vai filtrar se foi o não publicado
+    recipes = Recipe.objects.filter(
+        is_published=True,
+    ).order_by('-id')
 
     return render(request, 'recipes/pages/home.html', context={
         'recipes': recipes,
@@ -24,10 +27,11 @@ def category(request, category_id):
     Uso __id=category_id.
     """
     recipes = Recipe.objects.filter(
-        category__id=category_id
+        category__id=category_id,
+        is_published=True,
     ).order_by('-id')
 
-    return render(request, 'recipes/pages/home.html', context={
+    return render(request, 'recipes/pages/category.html', context={
         'recipes': recipes,
         # Aqui ja foi usado:cria uma lista de 10 receitas na home
         # Agora busca direto em Admin
